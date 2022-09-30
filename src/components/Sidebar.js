@@ -1,5 +1,6 @@
 import React from 'react'
 import { SidebarContainer, Icon, CloseIcon,SidebarWrapper, SidebarMenu,SidebarLink} from './SidebarElements'
+import {FaUserCircle,FaShoppingCart} from 'react-icons/fa'
 
 const Sidebar = ({isOpen,toggle}) => {
     return (
@@ -10,13 +11,10 @@ const Sidebar = ({isOpen,toggle}) => {
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink to='services' onClick={toggle}>
-                        Services
+                    <FaShoppingCart/> Cart
                     </SidebarLink>
                     <SidebarLink to='testimonials' onClick={toggle}>
-                        Temoignages
-                    </SidebarLink>
-                    <SidebarLink to='footer' onClick={toggle}>
-                        Contacts
+                    <FaUserCircle/> User
                     </SidebarLink>
                 </SidebarMenu>
                 {/* <SideBtnWrap>

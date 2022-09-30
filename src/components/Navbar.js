@@ -1,36 +1,27 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import {Nav, NavLink, Bars, NavMenu /*NavBtn,NavBtnLink*/} from './NavbarElements'
+import { Nav, NavLink, Bars, NavMenu /*NavBtn,NavBtnLink*/ } from './NavbarElements'
 import '../styles/navbar.css'
-// import { fadeIn } from 'react-animations'
+import { FaUserCircle, FaShoppingCart } from 'react-icons/fa'
 
-const Navbar = ({toggle}) => {
+const Navbar = ({ toggle }) => {
     return (
         <>
             <Nav>
                 <NavLink to="/">
-                    <img src={logo} alt="logo" className="logo1"></img>  
+                    <img src={logo} alt="logo" className="logo1"></img>
                 </NavLink>
-                <Bars onClick={toggle}/>
+                <Bars onClick={toggle} />
                 <NavMenu>
-                    <NavLink to= 'services' activeStyle>
-                        Services
+                    <NavLink to='services' activeStyle>
+                        <FaShoppingCart /> Cart
                     </NavLink>
-                    <NavLink to= 'testimonials' activeStyle>
-                        Temoignages
-                    </NavLink>
-                    <NavLink to= 'footer' activeStyle>
-                        Contacts
+                    <NavLink to='footer' activeStyle>
+                        <FaUserCircle /> User
                     </NavLink>
                 </NavMenu>
-                {/* <NavBtn>
-                    <NavBtnLink to='/signin'>
-                        Sign In
-                    </NavBtnLink>
-                </NavBtn> */}
             </Nav>
         </>
     )
 }
-
 export default Navbar

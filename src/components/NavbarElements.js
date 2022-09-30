@@ -13,7 +13,7 @@ export const Nav = styled.nav`
  height: 80px;
  display: flex;
  justify-content: space-between;
- padding: 0.1rem calc((10vw -1000px)/2);
+ padding: 0.1rem calc((1vw -1000px)/2);
  z-index: 10;
  position: fixed;
  width: 100%;
@@ -28,6 +28,7 @@ export const Nav = styled.nav`
 
 export const NavLink = styled(LinkS)`
 color: #fff;
+font-size:2em;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -41,12 +42,12 @@ animation: 1s ${fadeinright};
 
 &:hover{
     transition: all 0.5s ease-in-out;
-    color: #178bb3;
+    color: #fcff18;
     tranform: scale(0.7);
 }
 
 &.active{
-    color: #15cdfc;
+    color: #fcff18;
     font-weight: 700;
 }
 `;
@@ -70,7 +71,7 @@ animation: 1s ${fadeinleft};
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-margin-right: -24px;
+margin-right: 1%;
 
 
 @media screen and (max-width:768px){
