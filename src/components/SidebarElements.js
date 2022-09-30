@@ -59,7 +59,7 @@ color: #fff;
 cursor: pointer;
 
 &:hover{
-    color: #178bb3;
+    color: #fcff18;
     transition: 0.2s ease-in-out;
 }
 `
