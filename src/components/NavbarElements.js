@@ -9,7 +9,7 @@ const fadeinleft = keyframes`${fadeInLeft}`
 const fadeinright = keyframes`${fadeInRight}`
 
 export const Nav = styled.nav`
- background: #000;
+ background: rgb(30,30,30);
  height: 80px;
  display: flex;
  justify-content: space-between;
