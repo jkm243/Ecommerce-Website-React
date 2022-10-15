@@ -29,6 +29,7 @@ const HeroSection = () => {
                 dark='true'>
                     Commencer {hover ? <ArrowForward /> : <ArrowRight/>}
                 </Button>
+                
             </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>

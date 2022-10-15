@@ -7,8 +7,31 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
+import {styled } from '@mui/material/styles';
 
 const Navbar = ({ toggle }) => {
+    const CssTextField = styled(TextField)({
+
+        '& label.Mui-focused': {
+          color: 'yellow',
+        },
+        '& .MuiInput-underline:after': {
+          borderBottomColor: 'yellow',
+        },
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: 'white',
+          },
+          '&:hover fieldset': {
+            borderColor: 'yellow',
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: 'yellow',
+            backgroundColor: 'transparent',
+          },
+        },
+      });
+
     return (
         <>
             <Nav>
@@ -25,13 +48,13 @@ const Navbar = ({ toggle }) => {
                         noValidate
                         autoComplete="off"
                     >
-                        <TextField id="outlined-search" label="Search field" type="search" color="primary" InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon color="primary" />
-            </InputAdornment>
-          ),
-        }}/>
+                        <CssTextField  id="outlined-search" label="Search field" type="search" InputProps={{
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <SearchIcon color="success" />
+                                </InputAdornment>
+                            ),
+                        }} />
                     </Box>
                     <NavLink to='services' activeStyle>
                         <FaShoppingCart /> Cart
